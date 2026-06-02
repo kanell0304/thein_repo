@@ -30,6 +30,7 @@ public class JavaDataTypes {
         TestClass testClass = new TestClass();
         int[] arr1 = {1, 2, 3, 4, 5};
         String[] arr2 = {"Apple", "Banana", "Orange"};
+        // String arr2[] = {"Apple", "Banana", "Orange"}; - 이렇게 변수명 뒤에 []를 붙여도 된다.
         String str = "BlueBerry";
 
         System.out.println(num1);
