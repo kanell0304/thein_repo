@@ -11,11 +11,11 @@ public class DBConnectEx1 {
         // INSERT SQL
         String insertSql =
                 "INSERT INTO departments(name) VALUES(?)";
-
+        
         // SELECT SQL
         String selectSqlFromDepartments =
                 "SELECT id, name FROM departments";
-             
+        
         try {
         	
         	Connection conn = ConnectDB.getConnection();
@@ -35,30 +35,30 @@ public class DBConnectEx1 {
 //            }
 
             // SELECT (조회)
-            try (
-                Statement stmt =
-                        conn.createStatement();
-
-                ResultSet rs =
-                        stmt.executeQuery(selectSql)
-            ) {
-
-                System.out.println("\n부서 목록");
-
-                while (rs.next()) {
-
-                    Long id =
-                            rs.getLong("id");
-
-                    String name =
-                            rs.getString("name");
-
-                    System.out.println(
-                            "ID : " + id +
-                            ", 부서명 : " + name
-                    );
-                }
-            }
+//            try (
+//                Statement stmt =
+//                        conn.createStatement();
+//
+//                ResultSet rs =
+//                        stmt.executeQuery(selectSql)
+//            ) {
+//
+//                System.out.println("\n부서 목록");
+//
+//                while (rs.next()) {
+//
+//                    Long id =
+//                            rs.getLong("id");
+//
+//                    String name =
+//                            rs.getString("name");
+//
+//                    System.out.println(
+//                            "ID : " + id +
+//                            ", 부서명 : " + name
+//                    );
+//                }
+//            }
         	
         } catch (Exception e) {
         	System.out.println(e.getMessage());
